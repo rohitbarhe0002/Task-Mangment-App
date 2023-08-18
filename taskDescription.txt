@@ -1,0 +1,71 @@
+1. Project Structure
+The application's project structure is organized as follows:
+    task-management-app/
+├── src/
+│   ├── app.ts
+│   ├── models/
+│   │   └── Task.ts
+│   ├── routes/
+│   │   ├── authRoutes.ts
+│   │   └── taskRoutes.ts
+│   ├── controllers/
+│   │   ├── authController.ts
+│   │   └── taskController.ts
+│   ├── middleware/
+│   │   └── authMiddleware.ts
+│   ├── tests/
+│   │   ├── authRoutes.test.ts
+│   │   ├── taskRoutes.test.ts
+│   │   └── taskController.test.ts
+├── tsconfig.json
+├── package.json
+└── yarn.lock
+
+
+2. Functionality Overview
+The task management application provides the following functionality:
+
+Task Management:
+
+Create a new task with a title, description, due date, and completion status.
+Retrieve all tasks with pagination, sorting, and filtering options.
+Retrieve a specific task by its ID.
+Update an existing task's details.
+Delete a task.
+User Authentication:
+
+Users can sign up by providing a username and password.
+Users can log in to obtain a JWT token for authorization.
+JWT tokens are used to authenticate and authorize users for protected routes.
+
+3. Endpoints and API Documentation
+Task Management Endpoints:
+
+POST /tasks: Create a new task.
+GET /tasks: Retrieve all tasks with pagination, sorting, and filtering.
+GET /tasks/:id: Retrieve a task by its ID.
+PUT /tasks/:id: Update an existing task.
+DELETE /tasks/:id: Delete a task.
+Authentication Endpoints:
+
+POST /signup: Register a new user.
+POST /login: Log in and receive a JWT token.
+
+
+4. Authentication and Authorization
+The application uses JSON Web Tokens (JWT) for authentication and authorization. When a user logs in, a JWT token is generated and included in the response. This token is required to access protected routes.
+
+
+5. Testing
+The application includes unit tests using the Jest testing framework to ensure the correctness of API endpoints, validation logic, and authentication mechanisms.
+
+6. Setting Up and Running the Application
+To set up and run the application:
+
+Install Node.js and MongoDB.
+Clone the project repository.
+Install project dependencies using npm install or yarn install.
+Configure environment variables in .env file (e.g., MONGODB_URL, JWT_SECRET).
+Run tests using npm test or yarn test.
+Start the application using npm start or yarn start.
+if there is any issue with ts-node intsall it first.
