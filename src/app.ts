@@ -6,7 +6,7 @@ import userRoutes from './routes/userRoutes';
 import authRoutes from './routes/authRoutes'; 
 
 const app = express();
-const port =  process.env.MONGODB_URL ||  3000;
+const port =   3002;
 
 app.use(express.json());
 app.use('/tasks', taskRoutes);
